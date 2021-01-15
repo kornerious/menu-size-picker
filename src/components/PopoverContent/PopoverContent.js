@@ -13,13 +13,9 @@ export default class PopoverContent extends PureComponent {
 
   handleActivateFilter(id) {
     this.setState({
-      filteredItems: this.state.filteredItems.map((item) => {
-        if (item.id === id) {
-          return { ...item, active: !item.active }
-        } else {
-          return item
-        }
-      }),
+      filteredItems: this.state.filteredItems.map((item) =>
+        item.id === id ? { ...item, active: !item.active } : item
+      ),
     })
   }
 

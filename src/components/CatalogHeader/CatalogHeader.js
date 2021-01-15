@@ -7,7 +7,7 @@ const { Header } = Layout
 const CatalogHeader = () => {
   return (
     <Header className="header">
-      <div className="logo">
+      <div className="header__logo">
         <Logo />
       </div>
     </Header>

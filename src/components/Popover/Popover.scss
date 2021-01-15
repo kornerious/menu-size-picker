@@ -10,8 +10,8 @@
     overflow: scroll;
     max-height: calc(100vh - 160px);
     left: 10px;
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 1;
     display: flex;
     flex-wrap: wrap;
