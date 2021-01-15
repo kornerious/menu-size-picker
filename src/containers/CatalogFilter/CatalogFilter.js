@@ -5,7 +5,7 @@ import { Tag } from 'antd'
 import Popover from '../../components/Popover/Popover'
 import uuid from 'react-uuid'
 import MediaQuery from 'react-responsive'
-import { updateFilter } from '../../actions/catalogActions'
+import updateFilter from '../../actions/catalogActions'
 import { removeFilter } from '../../actions/catalogActions'
 
 class CatalogFilter extends PureComponent {
