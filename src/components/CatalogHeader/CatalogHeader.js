@@ -1,14 +1,14 @@
 import React from 'react'
 import { Layout } from 'antd'
 import './CatalogHeader.scss'
-import Logo from '../../assets/icon/logo.svg'
+import logo from '../../assets/icon/logo.png'
 const { Header } = Layout
 
 const CatalogHeader = () => {
   return (
     <Header className="header">
       <div className="header__logo">
-        <Logo />
+        <img src={logo} alt="Logo" />
       </div>
     </Header>
   )

@@ -21,9 +21,9 @@ export default class PopoverContent extends PureComponent {
 
   render() {
     const { filteredItems, filterItem } = this.state
-    const { applyFilter, items, handleClick } = this.props
+    const { applyFilter, handleClick } = this.props
 
-    const activatedItems = items.filter((filterItem) => filterItem.active)
+    const activatedItems = filteredItems.filter((filterItem) => filterItem.active)
 
     return (
       <>
@@ -45,7 +45,7 @@ export default class PopoverContent extends PureComponent {
           >
             Apply
           </Button>
-          {activatedItems && (
+          {activatedItems && activatedItems.length ? (
             <Button
               onMouseDown={() => {
                 handleClick()
@@ -53,7 +53,7 @@ export default class PopoverContent extends PureComponent {
             >
               Cancel
             </Button>
-          )}
+          ) : null}
         </div>
       </>
     )

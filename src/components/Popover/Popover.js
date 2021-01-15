@@ -90,16 +90,20 @@ export default class Popover extends PureComponent {
         {this.state.popupVisible && (
           <div className="popover-container__popover">
             {filterItem === 'more filters' ? (
-              Object.keys(buttonItems)
-                .filter((buttonItemFiltered, index) => index > mobileIndex)
-                .map((buttonItemName, index) => (
-                  <Collapse
-                    accordion
-                    defaultActiveKey={['0']}
-                    onChange={() => {}}
-                    expandIconPosition={'right'}
-                    expandIcon={(props) => this.customExpandIcon(props)}
-                  >
+              <Collapse
+                accordion
+                defaultActiveKey={['0']}
+                onChange={() => {
+                  this.setState({
+                    filteredItems: this.props.items,
+                  })
+                }}
+                expandIconPosition={'right'}
+                expandIcon={(props) => this.customExpandIcon(props)}
+              >
+                {Object.keys(buttonItems)
+                  .filter((buttonItemFiltered, index) => index > mobileIndex)
+                  .map((buttonItemName, index) => (
                     <Panel header={`${capitalize(buttonItemName)}`} key={index}>
                       <PopoverContent
                         key={uuid()}
@@ -109,8 +113,8 @@ export default class Popover extends PureComponent {
                         handleClick={this.handleClick}
                       />
                     </Panel>
-                  </Collapse>
-                ))
+                  ))}
+              </Collapse>
             ) : (
               <PopoverContent {...this.props} items={buttonItems} handleClick={this.handleClick} />
             )}

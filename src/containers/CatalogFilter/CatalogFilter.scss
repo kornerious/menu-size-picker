@@ -86,6 +86,8 @@ $style: #fa8c16;
   }
 
   &__tags {
+    overflow: scroll;
+    margin-left: 10px;
     .no-filter {
       height: 28px;
       display: inline-block;

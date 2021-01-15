@@ -1,6 +1,6 @@
 import { UPDATE_FILTER, REMOVE_FILTER } from './types'
 
-function updateFilter(payload) {
+export default function updateFilter(payload) {
   return (dispatch) => {
     dispatch({
       type: UPDATE_FILTER,
@@ -9,7 +9,7 @@ function updateFilter(payload) {
   }
 }
 
-function removeFilter(catalogField) {
+export function removeFilter(catalogField) {
   return (dispatch) => {
     dispatch({
       type: REMOVE_FILTER,
@@ -17,5 +17,3 @@ function removeFilter(catalogField) {
     })
   }
 }
-
-export { updateFilter, removeFilter }
