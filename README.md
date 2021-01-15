@@ -23,6 +23,7 @@ Filter button box-shadow matches the tag color, so the user can visually underst
 
 Filter popover closes when user click Apply button, Cancel button, or click outside of Popover component.
 
+Provided basic tests for components, helper and reducer
 
 ------------
 
