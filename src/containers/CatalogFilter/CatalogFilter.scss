@@ -1,0 +1,138 @@
+//  **********  FILTER COLORS  **********
+$size: #722ed1;
+$color: #a0d911;
+$more: #108ee9;
+$room: #eb2f96;
+$price: #2db7f5;
+$material: #fff702;
+$construction: #13c2c2;
+$style: #fa8c16;
+//  *********  FILTER COLORS-END *********
+
+.filter {
+  width: 100%;
+
+  &__content {
+    padding: 0 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .filter-bar {
+    margin: 10px 0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .size {
+      box-shadow: 0 0 3px 1px $size;
+    }
+    .color {
+      box-shadow: 0 0 3px 1px $color;
+    }
+    .more {
+      box-shadow: 0 0 3px 1px $more;
+    }
+    .room {
+      box-shadow: 0 0 3px 1px $room;
+    }
+    .price {
+      box-shadow: 0 0 3px 1px $price;
+    }
+    .material {
+      box-shadow: 0 0 3px 1px $material;
+    }
+    .construction {
+      box-shadow: 0 0 3px 1px $construction;
+    }
+    .style {
+      box-shadow: 0 0 3px 1px $style;
+    }
+
+    .buttons-container {
+      width: calc(100% / 3 - 10px);
+      margin-right: 10px;
+
+      .button-container button {
+        width: 100%;
+      }
+    }
+
+    .active-button {
+      position: relative;
+      box-shadow: 0 0 3px 2px red;
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 12px;
+        height: 12px;
+        border: 1px solid transparent;
+        border-left-color: #d7d7d7;
+        border-top-color: #d7d7d7;
+        transform: rotate(45deg);
+        left: calc(50% - 6px);
+        bottom: -16px;
+        background: white;
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 10px rgba(101, 100, 100, 0.2);
+      }
+    }
+  }
+
+  &__tags {
+    .no-filter {
+      height: 28px;
+      display: inline-block;
+    }
+    .size {
+      background-color: $size;
+    }
+    .color {
+      background-color: $color;
+    }
+    .more {
+      background-color: $more;
+    }
+    .room {
+      background-color: $room;
+    }
+    .price {
+      background-color: $price;
+    }
+    .material {
+      background-color: $material;
+    }
+    .construction {
+      background-color: $construction;
+    }
+    .style {
+      background-color: $style;
+    }
+
+    .edit-tag {
+      margin: 5px 5px 5px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .filter {
+    .filter__content {
+      .filter-bar {
+        .buttons-container {
+          width: initial;
+          margin-right: 0;
+          .button-container button {
+            width: initial;
+          }
+        }
+      }
+    }
+  }
+}

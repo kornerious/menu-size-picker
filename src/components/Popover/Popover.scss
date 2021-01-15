@@ -1,0 +1,84 @@
+.popover-container {
+  position: relative;
+
+  &__popover {
+    background: #fff;
+    border-radius: 4px;
+    width: calc(100% - 20px);
+    margin: 5px auto;
+    position: fixed;
+    overflow: scroll;
+    max-height: calc(100vh - 160px);
+    left: 10px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 0 5px;
+
+    button {
+      width: calc(100% / 3 - 10px);
+    }
+
+    .active-filter {
+      box-shadow: 0 0 2px 1px red;
+    }
+
+    .ant-collapse {
+      width: 100%;
+      border: none;
+      background-color: white;
+      margin: 0 10px;
+      .ant-collapse-item > .ant-collapse-header {
+        padding: 12px 0 12px 0;
+        .ant-collapse-arrow {
+          font-size: 16px;
+          padding: 16px 0;
+          width: 10px;
+          margin-right: -5px;
+        }
+      }
+
+      .ant-collapse-content {
+        border-top: none;
+        & > .ant-collapse-content-box {
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0 -5px;
+        }
+      }
+    }
+
+    button {
+      height: 50px;
+      word-break: break-word;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 10px;
+    }
+
+    .popover-footer {
+      margin: 20px 0 10px 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .popover-container {
+    &__popover {
+      position: absolute;
+      left: 0;
+      width: 400px;
+      padding: 15px 15px 0 15px;
+      .popover-footer {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
